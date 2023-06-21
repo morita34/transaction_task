@@ -10,6 +10,7 @@ class Order < ApplicationRecord
       item.with_lock do
         item.total_quantity += line_item.quantity
         item.save!
+      end
     end
   end
 end
